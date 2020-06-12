@@ -1,0 +1,253 @@
+/*
+Theme Name: Felipe Peixoto
+Text Domain: felipepeixoto
+Version: 1
+Requires PHP: 5.2.4
+Description: Tema feito para perfil de Felipe Peixoto
+Author: Felipe Peixoto peixoto152@gmail.com
+Author URI: 
+Theme URI: 
+
+
+Cores:
+Fresh #4abdac
+Vermillion #fc4a1a
+Sunshine #f7b733
+Clean #dfdce3
+*/
+
+.clear{ clear: both; }
+.vertical-align { vertical-align: middle;}
+.no-margin-top { margin-top: 0; }
+.margin-topbottom{margin: 10px 0px;}
+.sidenav-trigger{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 44px;
+	height: 44px;
+	z-index: 700;
+	background-color: #fc4a1a;
+	border: 0;
+	text-align: center;
+	font-size: 28px;
+	color: #dfdce3;
+}
+.sidenav {
+	background-color: #dfdce3; 
+}
+.sidenav .user-view{
+	padding: 20px;
+}
+.sidenav .user-view .circle{
+	height: auto;
+    width: 100%;
+}
+.sidenav .user-view .name{
+	    margin-top: 0;
+}
+.divider{ background-color: #000000de; }
+.sidenav li:not(.submenu)>a{
+	transition: all 0.2s ease-in-out;
+	font-size: 20px;
+}
+.sidenav li:not(.submenu)>a:hover{
+	padding: 0 32px 0 50px;
+}
+.sidenav li>a>i.material-icons{
+	margin: 0px 10px 0 0;
+}
+.sidenav .submenu { text-align: center; }
+.sidenav .submenu a{ display: inline-block; padding: 0 5px }
+.sidenav .submenu i.material-icons{ margin: 0 }
+
+.home .tittleDisplay{
+	z-index: 10;
+	position: absolute;
+	width: 100%;
+}
+.home h1{
+	font-weight: bold;
+	text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+@media only screen and (max-width: 600px){
+  .slider .slides li .caption{
+    top: 37%;
+  }
+  .slider .slides h3{
+    font-size: 2.22rem;
+    text-shadow: 0.1em 0.1em 0.1em black;
+  }
+  .slider .slides h5{
+    text-shadow: 0.1em 0.1em 0.1em black;
+  }
+}
+
+/*Header*/
+.headerTopo, .headerfake {
+  background-color: #4abdac;
+  background-image: url('assets/img/header-ondas.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 161px;
+  padding-top: 60px;
+}
+.headerTopo h1, .headerTopo .fakeh1 {
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #FFF;
+  text-align: center;
+}
+
+/*Menu Blog*/
+.segundary-menu{
+  height: auto;
+  display: block; 
+  width: 100%;
+  background-color: #dfdce3;
+  box-shadow: none;
+}
+.segundary-menu ul {
+  float: left;
+  width: 66%;
+  margin: 0;
+}
+.segundary-menu:not(.woocommerce-MyAccount-navigation) ul li:first-of-type{
+  padding-left: 0;
+}
+.segundary-menu ul li {
+  display: inline-block;
+  padding: 0 20px;
+  height: 64px;
+  line-height: 64px;
+}
+.segundary-menu ul li a{
+  height: 64px;
+  line-height: 64px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #535353;
+}
+.segundary-menu .searchbox {
+  float: right;
+  width: 33%;
+  margin: 0;
+  text-align: right;
+}
+.segundary-menu .searchbox input {
+  width: auto;
+  border-bottom: 0px !important;
+}
+.segundary-menu .searchbox input::placeholder {
+  opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: #535353;
+}
+.segundary-menu .searchbox button {
+    position: relative;
+    background: none;
+    border: 0;
+    top: 5px;
+    left: 5px;
+}
+@media only screen and (max-width: 600px){
+  .segundary-menu ul{
+    width: 100%;
+  }
+  .segundary-menu ul li{
+    width: 32%;
+    text-align: center;
+  }
+  .segundary-menu ul li:first-of-type{
+    padding-left: 20px;
+  }
+  .segundary-menu .searchbox {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* breadcrumbs */
+.breadcrumbs{
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 3.5;
+  color: #7c7c7c;
+}
+.breadcrumbs a{
+  color: #7c7c7c;
+  text-decoration: none;
+}
+/* HOME BLOG */
+.blog article h2, .category article h2{
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+.blog article p, .category article p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+/*PAGINAÇÃO*/
+.pagination-wrap { text-align: center; }
+ul.pagination { display: inline-block; }
+.pagination li.active { background-color: #fc4a1a; }
+/*PAGE*/
+.page main figure{ text-align: center; }
+.page main figcaption{ text-align: center; font-style: italic; }
+.page main img{
+  max-width: 90%;
+  text-align: center;
+}
+.page main figure.size-large img { width: 90%; }
+.page main figure.size-medium img { width: 50%; }
+.page main figure.size-thumbnail img { width: 30%; }
+.page .card-image img{ max-width: 100%; }
+  /*PAGE SOBRE*/
+
+
+.page-id-53 p{
+  font-size: 20px;
+}
+
+/*SINGLE*/
+.single-post h1{
+  margin: 0px;
+}
+.single-post h2{
+  font-size: 3rem;
+}
+.single-post .conteudo figure{
+  float: left;
+  width: 40%;
+  margin: 0;
+  margin-right: 10px; 
+}
+.single-post .conteudo p{
+  font-size: 18px; 
+}
+.single-post .conteudo ul{ list-style-type: disc !important; padding-left: 20px !important; }
+.single-post .conteudo ul li {list-style-type: disc !important;}
+.blog-destaques article h2{
+  margin: 7px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px){
+  .single-post h1{
+    font-size: 2.4rem;
+  }
+  .single-post h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+}
+/*cards*/
+.card .card-content .card-title { }
+.card .card-content p {}
