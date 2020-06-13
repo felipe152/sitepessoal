@@ -222,11 +222,15 @@ ul.pagination { display: inline-block; }
 .single-post h2{
   font-size: 3rem;
 }
-.single-post .conteudo figure{
+.single-post .conteudo .imgdestaque{
   float: left;
   width: 40%;
   margin: 0;
   margin-right: 10px; 
+}
+.single-post .conteudo figcaption{
+  text-align: center;
+  font-style: italic;
 }
 .single-post .conteudo p{
   font-size: 18px; 

@@ -27,7 +27,7 @@ if ( function_exists('yoast_breadcrumb') ) {
 				<meta itemprop="dateModified" content="<?php echo get_the_modified_date("Y-m-d H:i:s"); ?>">
 			</header>
 			<div class="conteudo" itemprop="articleBody">
-				<figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<figure class="imgdestaque" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 					<img itemprop="url contentUrl" width="100%" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(); ?>">
 					<meta itemprop="width" content="<?php echo $image[1]; ?>">
         			<meta itemprop="height" content="<?php echo $image[2]; ?>">
@@ -42,14 +42,24 @@ if ( function_exists('yoast_breadcrumb') ) {
 	</section>
 	<?php $recent_posts = wp_get_recent_posts(array('category' => $category_id,'numberposts' => 3)); ?>
 	<?php if ($recent_posts): ?>
+		<?php wp_reset_postdata(); ?>
 	<section class="blog-destaques">
 		<h2 class="no-margin-top center">Leia também</h2>
 		<div class="row">
 		<?php
 		foreach( $recent_posts as $recent ){
-			get_template_part( 'template-part/chamada-post', get_post_type() );
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent['ID'] ), 'post-principal' );
+?>
+			<article class="col s12 m4">
+				<div>
+					<a href="<?php echo get_permalink($recent['ID']) ?>"><img width="100%" src="<?php echo $image[0]; ?>" alt=""></a>
+				</div>
+				<h2><?php echo $recent['post_title'] ?></h2>
+				<p><?php echo $recent['post_excerpt'] ?></p>
+			</article><!-- .post -->			
+		<?php			
 		}
-		wp_reset_query();
+		wp_reset_postdata();
 		?>	
 		</div>	
 	</section>

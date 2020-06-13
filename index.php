@@ -7,10 +7,6 @@ get_header('blog');
 	if ( have_posts() ) {
 		$i = 0;
 		while ( have_posts() ) {
-			$i++;
-			if ( $i > 1 ) {
-				echo '<hr />';
-			}
 			the_post();
 			get_template_part( 'template-part/chamada-post', get_post_type() );
 		}

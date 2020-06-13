@@ -1,3 +1,4 @@
+<?php global $post; ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'post-principal' ); ?>
 <article <?php post_class('col s12 m4'); ?> id="post-<?php the_ID(); ?>">
 	<div>

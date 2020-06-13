@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 	$('.page-id-30 .card-content .card-title').css('min-height', minHeight);
 
 	/*BLOG*/
-	$(".single-post figure").each(function( index ) {
+	$(".single-post figure img").each(function( index ) {
   		$(this).addClass('materialboxed');
 	});
 	//Materialbox
