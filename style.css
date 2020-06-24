@@ -16,6 +16,16 @@ Sunshine #f7b733
 Clean #dfdce3
 */
 
+/* CORES */
+.fresh{ background-color: #4abdac !important; }
+.fresh-text{ color: #4abdac !important; }
+.vermillion{ background-color: #fc4a1a !important; }
+.vermillion-text{ color: #fc4a1a !important; }
+.sunshine{ background-color: #f7b733 !important; }
+.sunshine-text{ color: #f7b733 !important; }
+.cean{ background-color: #dfdce3 !important; }
+.cean-text{ color: #dfdce3 !important; }
+
 .clear{ clear: both; }
 .vertical-align { vertical-align: middle;}
 .no-margin-top { margin-top: 0; }
@@ -242,6 +252,13 @@ ul.pagination { display: inline-block; }
   margin: 7px 0;
   font-size: 1.5rem;
   font-weight: bold;
+}
+.sec-newsletter .btn {
+    width: 90%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
 }
 @media only screen and (max-width: 600px){
   .single-post h1{

@@ -34,17 +34,19 @@ if ( function_exists('yoast_breadcrumb') ) {
 				</figure>
 				<?php the_content(); ?>
 			</div>
-			<div class="row">
-				<div class="col s12 no-padding-left">
-					<?php //get_template_part( 'template-part/newsletter', 'horizontal' ); ?>
-				</div>
-				<div class="col s12 m6 no-padding-left"><?php comments_template(); ?></div>
-			</div>
-			
-		</article>
+		</article>		
+		
 <?php 
 	}
 ?>		
+	</section>
+	<?php if (isset($_GET['debug'])): ?>
+		
+	
+	<?php get_template_part( 'template-part/newsletter', 'horizontal' ); ?>
+	<?php endif ?>
+	<section class="row">
+		<div class="col s12 m8 l6 no-padding-left"><?php comments_template(); ?></div>
 	</section>
 	<?php $recent_posts = wp_get_recent_posts(array('category' => $category_id,'numberposts' => 3)); ?>
 	<?php if ($recent_posts): ?>
