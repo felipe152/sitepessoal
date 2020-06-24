@@ -19,6 +19,7 @@ Clean #dfdce3
 .clear{ clear: both; }
 .vertical-align { vertical-align: middle;}
 .no-margin-top { margin-top: 0; }
+.no-padding-left { padding-left: 0 !important; }
 .margin-topbottom{margin: 10px 0px;}
 .sidenav-trigger{
 	position: absolute;
