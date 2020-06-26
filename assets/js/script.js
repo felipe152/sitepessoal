@@ -57,4 +57,22 @@ jQuery(document).ready(function($) {
 		},
 	});
 
+	$('#form-newsletter').submit(function() {
+		$('.inputs-form-newsletter').addClass('hide');
+		$('.load-newsletter').removeClass('hide');
+		var ajaxUrl = $('#form-newsletter').attr('action');
+		var dados = {
+			'action': 'inscreve_newsletter',
+			'dados' : $(this).serialize()
+		};
+		$.post(ajaxUrl, dados, function(resposta) {
+			$('.load-newsletter').addClass('hide');
+			$('.message-newsletter .woocommerce-message').addClass(resposta.class);
+			$('.message-newsletter .woocommerce-message').html(resposta.mensagem);
+			$('.message-newsletter').removeClass('hide');
+			fbq('track', 'Lead');
+		}, 'json');
+		return false;
+	});
+
 });
