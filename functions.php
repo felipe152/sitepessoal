@@ -83,12 +83,14 @@ function my_init(){
 
     wp_register_style('base-css',$uri.'/style.css',array('materialize-css'),$versao);
     wp_enqueue_style('base-css');
-
-    
-    
   }
 }
 add_action( 'init', 'my_init' );
+
+
+/* Newsletter */
+add_action('wp_ajax_inscreve_newsletter', 'inscreve_newsletter');
+add_action('wp_ajax_nopriv_inscreve_newsletter', 'inscreve_newsletter');
 
 
 function cardsPageChild($att){
