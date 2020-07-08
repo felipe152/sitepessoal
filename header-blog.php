@@ -2,7 +2,7 @@
 get_header();
 ?>
 <header class="headerTopo">
-<?php if (is_single()): ?>
+<?php if (is_single() or is_category()): ?>
 	<span class="fakeh1">Blog</span>
 <?php else: ?>
 	<h1>Blog</h1>
